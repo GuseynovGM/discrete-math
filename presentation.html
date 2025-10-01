@@ -19,7 +19,7 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: #f5f5f5;
-            padding: 20px;
+            padding: 10px;
         }
 
         .slide {
@@ -27,23 +27,10 @@
             height: 297mm;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             margin: 0 auto;
-            padding: 30mm;
+            padding: 15mm;
             box-shadow: 0 10px 40px rgba(0,0,0,0.2);
             position: relative;
             overflow: hidden;
-        }
-
-        .slide::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%);
-            pointer-events: none;
         }
 
         .content {
@@ -56,119 +43,128 @@
 
         .header {
             text-align: center;
-            margin-bottom: 15mm;
-            background: rgba(255,255,255,0.95);
-            padding: 15mm;
-            border-radius: 12px;
+            margin-bottom: 6mm;
+            background: rgba(255,255,255,0.98);
+            padding: 8mm;
+            border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         h1 {
             color: #2d3748;
-            font-size: 20pt;
+            font-size: 16pt;
             font-weight: 700;
-            line-height: 1.3;
-            margin-bottom: 8mm;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            line-height: 1.2;
+            margin-bottom: 3mm;
         }
 
         .author {
             color: #4a5568;
-            font-size: 14pt;
+            font-size: 11pt;
             font-weight: 600;
-            margin-top: 5mm;
         }
 
-        .main-content {
+        .main-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8mm;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4mm;
             flex: 1;
         }
 
         .section {
-            background: rgba(255,255,255,0.95);
-            padding: 6mm;
-            border-radius: 10px;
+            background: rgba(255,255,255,0.98);
+            padding: 4mm;
+            border-radius: 8px;
             box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
         }
 
-        .section.full-width {
-            grid-column: 1 / -1;
+        .section.span-2 {
+            grid-column: span 2;
+        }
+
+        .section.span-3 {
+            grid-column: span 3;
         }
 
         h2 {
             color: #667eea;
-            font-size: 13pt;
+            font-size: 10pt;
             font-weight: 700;
-            margin-bottom: 4mm;
-            border-bottom: 2px solid #667eea;
-            padding-bottom: 2mm;
-        }
-
-        h3 {
-            color: #4a5568;
-            font-size: 11pt;
-            font-weight: 600;
             margin-bottom: 3mm;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 1.5mm;
         }
 
         p, li {
             color: #2d3748;
-            font-size: 9pt;
-            line-height: 1.5;
-            margin-bottom: 2mm;
-        }
-
-        ul {
-            padding-left: 5mm;
-        }
-
-        li {
+            font-size: 7.5pt;
+            line-height: 1.4;
             margin-bottom: 1.5mm;
         }
 
-        .highlight {
-            background: linear-gradient(120deg, #ffd700 0%, #ffed4e 100%);
-            padding: 1mm 2mm;
-            border-radius: 3px;
-            font-weight: 600;
-            display: inline-block;
+        ul {
+            padding-left: 4mm;
+            margin: 0;
         }
 
-        .chart-container {
-            background: white;
-            padding: 4mm;
-            border-radius: 8px;
-            margin-top: 3mm;
+        li {
+            margin-bottom: 1mm;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2mm;
+            margin-top: 2mm;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 2mm;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 13pt;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 1mm;
+        }
+
+        .stat-label {
+            font-size: 6.5pt;
+            color: #4a5568;
+            font-weight: 600;
+            line-height: 1.2;
         }
 
         .comparison-chart {
             display: flex;
             justify-content: space-around;
             align-items: flex-end;
-            height: 40mm;
-            margin-top: 3mm;
+            height: 30mm;
+            margin-top: 2mm;
         }
 
         .chart-bar {
             flex: 1;
-            margin: 0 2mm;
+            margin: 0 1mm;
             text-align: center;
         }
 
         .bar {
             background: linear-gradient(180deg, #fc8181 0%, #e53e3e 100%);
             border-radius: 4px 4px 0 0;
-            position: relative;
             display: flex;
             align-items: flex-start;
             justify-content: center;
             padding-top: 2mm;
             color: white;
             font-weight: 700;
-            font-size: 10pt;
+            font-size: 9pt;
         }
 
         .bar.vr {
@@ -176,72 +172,62 @@
         }
 
         .bar-label {
-            margin-top: 2mm;
-            font-size: 8pt;
+            margin-top: 1.5mm;
+            font-size: 7pt;
             font-weight: 600;
             color: #2d3748;
+            line-height: 1.2;
         }
 
-        .savings-chart {
+        .big-stat {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 5mm;
-            border-radius: 8px;
-            text-align: center;
-            margin-top: 3mm;
-        }
-
-        .savings-number {
-            font-size: 32pt;
-            font-weight: 700;
-            margin: 3mm 0;
-        }
-
-        .forecast-chart {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-            padding: 5mm;
-            border-radius: 8px;
-            text-align: center;
-            margin-top: 3mm;
-        }
-
-        .forecast-number {
-            font-size: 28pt;
-            font-weight: 700;
-            margin: 2mm 0;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3mm;
-            margin-top: 3mm;
-        }
-
-        .stat-box {
-            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
             padding: 3mm;
             border-radius: 6px;
             text-align: center;
+            margin-top: 2mm;
         }
 
-        .stat-value {
-            font-size: 16pt;
+        .big-number {
+            font-size: 20pt;
             font-weight: 700;
-            color: #2d3748;
-            margin-bottom: 1mm;
+            margin: 1mm 0;
         }
 
-        .stat-label {
+        .big-label {
             font-size: 7pt;
-            color: #4a5568;
-            font-weight: 600;
         }
 
-        .emoji {
-            font-size: 14pt;
-            margin-right: 2mm;
+        .boxes-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2mm;
+            margin-top: 2mm;
+        }
+
+        .color-box {
+            padding: 3mm;
+            border-radius: 6px;
+            color: white;
+            text-align: center;
+        }
+
+        .box-title {
+            font-weight: 700;
+            margin-bottom: 1.5mm;
+            font-size: 8pt;
+        }
+
+        .box-text {
+            font-size: 6.5pt;
+            line-height: 1.3;
+        }
+
+        .highlight {
+            background: #ffd700;
+            padding: 0.5mm 1mm;
+            border-radius: 2px;
+            font-weight: 600;
         }
 
         @media print {
@@ -252,7 +238,6 @@
 
             .slide {
                 box-shadow: none;
-                page-break-after: always;
             }
         }
     </style>
@@ -261,86 +246,62 @@
     <div class="slide">
         <div class="content">
             <div class="header">
-                <h1>Экономическая эффективность внедрения VR/AR/MR-тренажёров для подготовки кадров в профессиях с высоким риском для жизни</h1>
+                <h1>Экономическая эффективность внедрения VR/AR/MR-тренажёров для подготовки кадров в профессиях с высоким риском</h1>
                 <div class="author">Гусейнов Гусейн Мурадович</div>
             </div>
 
-            <div class="main-content">
-                <!-- Левая колонка -->
+            <div class="main-grid">
+                <!-- Мотивация -->
                 <div class="section">
-                    <h2>💡 Мотивация и контекст</h2>
-                    <p>Современные методы подготовки персонала в отраслях с высоким риском характеризуются:</p>
-                    <ul>
-                        <li>Высокой стоимостью обучения</li>
-                        <li>Длительной адаптацией сотрудников</li>
-                        <li>Ограниченной безопасностью практики</li>
-                    </ul>
-                    
+                    <h2>💡 Мотивация</h2>
+                    <p><strong>Проблемы традиционного обучения:</strong> высокая стоимость, длительная адаптация, риски при практике</p>
                     <div class="stats-grid">
                         <div class="stat-box">
                             <div class="stat-value">171 млн</div>
-                            <div class="stat-label">пользователей VR в мире</div>
+                            <div class="stat-label">пользователей VR</div>
                         </div>
                         <div class="stat-box">
                             <div class="stat-value">30%</div>
-                            <div class="stat-label">сокращение затрат (BCG)</div>
+                            <div class="stat-label">↓ затрат (BCG)</div>
                         </div>
                         <div class="stat-box">
                             <div class="stat-value">30-50%</div>
-                            <div class="stat-label">ускорение адаптации (Deloitte)</div>
+                            <div class="stat-label">↑ адаптации</div>
                         </div>
                         <div class="stat-box">
-                            <div class="stat-value">$1.5 трлн</div>
-                            <div class="stat-label">вклад в экономику к 2030 (PwC)</div>
+                            <div class="stat-value">$1.5T</div>
+                            <div class="stat-label">к 2030 (PwC)</div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Правая колонка -->
-                <div class="section">
-                    <h2>❓ Исследовательский вопрос</h2>
-                    <p><strong>Как использование VR/AR-тренажёров влияет на экономическую эффективность подготовки кадров в отраслях с высоким риском?</strong></p>
-                    
-                    <h3 style="margin-top: 4mm;">Дополнительно:</h3>
-                    <ul>
-                        <li>Какие факторы определяют успешность внедрения VR/AR?</li>
-                        <li>Как технологии отражаются на производительности и издержках?</li>
-                    </ul>
-
-                    <div class="savings-chart">
-                        <div style="font-size: 10pt; font-weight: 600;">ЭКОНОМИЯ ЗАТРАТ</div>
-                        <div class="savings-number">30%</div>
-                        <div style="font-size: 8pt;">при внедрении VR/AR-обучения</div>
                     </div>
                 </div>
 
                 <!-- График сравнения -->
                 <div class="section">
-                    <h2>📊 Традиционное обучение vs VR/AR</h2>
+                    <h2>📊 Сравнение затрат</h2>
                     <div class="comparison-chart">
                         <div class="chart-bar">
-                            <div class="bar" style="height: 35mm;">100%</div>
-                            <div class="bar-label">Традиционное<br>обучение</div>
+                            <div class="bar" style="height: 25mm;">100%</div>
+                            <div class="bar-label">Традиционное</div>
                         </div>
                         <div class="chart-bar">
-                            <div class="bar vr" style="height: 24.5mm;">70%</div>
-                            <div class="bar-label">VR/AR<br>обучение</div>
+                            <div class="bar vr" style="height: 17.5mm;">70%</div>
+                            <div class="bar-label">VR/AR</div>
                         </div>
                     </div>
-                    <p style="text-align: center; margin-top: 3mm; font-size: 8pt; color: #4a5568;">
-                        <strong>Сравнение затрат на обучение персонала</strong>
-                    </p>
                 </div>
 
-                <!-- Прогноз -->
+                <!-- Вопрос исследования -->
                 <div class="section">
-                    <h2>📈 Прогноз PwC (2030)</h2>
-                    <div class="forecast-chart">
-                        <div style="font-size: 9pt; font-weight: 600;">ВКЛАД VR/AR В МИРОВУЮ ЭКОНОМИКУ</div>
-                        <div class="forecast-number">$1.5 трлн</div>
-                        <div style="font-size: 10pt; margin-top: 2mm;">
-                            <strong>35%</strong> за счёт роста производительности труда
-                        </div>
+                    <h2>❓ Вопрос</h2>
+                    <p><strong>Как VR/AR влияет на экономическую эффективность подготовки кадров?</strong></p>
+                    <p style="margin-top: 2mm;"><strong>Дополнительно:</strong></p>
+                    <ul>
+                        <li>Факторы успеха внедрения</li>
+                        <li>Влияние на производительность</li>
+                    </ul>
+                    <div class="big-stat">
+                        <div class="big-label">ЭКОНОМИЯ</div>
+                        <div class="big-number">30%</div>
                     </div>
                 </div>
 
@@ -348,10 +309,11 @@
                 <div class="section">
                     <h2>🎯 Практическая значимость</h2>
                     <ul>
-                        <li><span class="highlight">Сокращение затрат</span> на обучение до 30%</li>
-                        <li><span class="highlight">Ускорение адаптации</span> и повышение безопасности</li>
-                        <li><span class="highlight">Методика выбора</span> VR/AR-решений под отрасль</li>
-                        <li><span class="highlight">Повышение конкурентоспособности</span> предприятий</li>
+                        <li>Сокращение затрат до <span class="highlight">30%</span></li>
+                        <li>Ускорение адаптации сотрудников</li>
+                        <li>Повышение безопасности обучения</li>
+                        <li>Методика выбора VR/AR-решений</li>
+                        <li>Рост конкурентоспособности</li>
                     </ul>
                 </div>
 
@@ -359,28 +321,38 @@
                 <div class="section">
                     <h2>🔬 Научный вклад</h2>
                     <ul>
-                        <li>Новая методика оценки экономической эффективности VR/AR-тренажёров</li>
-                        <li>Выявление ключевых факторов влияния на отдачу от технологий</li>
-                        <li>Связь между внедрением VR/AR и ростом производительности</li>
-                        <li>Обогащение теории цифровой трансформации обучения</li>
+                        <li>Новая методика оценки эффективности VR/AR</li>
+                        <li>Выявление факторов отдачи от технологий</li>
+                        <li>Связь VR/AR с ростом производительности</li>
+                        <li>Обогащение теории цифровой трансформации</li>
                     </ul>
                 </div>
 
+                <!-- Прогноз -->
+                <div class="section">
+                    <h2>📈 Прогноз PwC (2030)</h2>
+                    <div class="big-stat" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <div class="big-label">ВКЛАД В ЭКОНОМИКУ</div>
+                        <div class="big-number">$1.5 трлн</div>
+                        <div style="font-size: 8pt; margin-top: 1mm;"><strong>35%</strong> — рост производительности</div>
+                    </div>
+                </div>
+
                 <!-- Новизна -->
-                <div class="section full-width">
+                <div class="section span-3">
                     <h2>✨ Новизна исследования</h2>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4mm;">
-                        <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 4mm; border-radius: 8px; color: white; text-align: center;">
-                            <div style="font-weight: 700; margin-bottom: 2mm; font-size: 10pt;">Комплексный подход</div>
-                            <div style="font-size: 8pt;">Сочетание экономико-статистического анализа, экспертных оценок и кейс-анализа</div>
+                    <div class="boxes-grid">
+                        <div class="color-box" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                            <div class="box-title">Комплексный подход</div>
+                            <div class="box-text">Сочетание экономико-статистического анализа, экспертных оценок и кейс-анализа внедрения VR/AR</div>
                         </div>
-                        <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 4mm; border-radius: 8px; color: white; text-align: center;">
-                            <div style="font-weight: 700; margin-bottom: 2mm; font-size: 10pt;">Экономический фокус</div>
-                            <div style="font-size: 8pt;">Акцент на экономико-организационном эффекте, не только технологическом</div>
+                        <div class="color-box" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                            <div class="box-title">Экономический фокус</div>
+                            <div class="box-text">Акцент на экономико-организационном эффекте, а не только на технологическом аспекте</div>
                         </div>
-                        <div style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); padding: 4mm; border-radius: 8px; color: white; text-align: center;">
-                            <div style="font-weight: 700; margin-bottom: 2mm; font-size: 10pt;">Адаптация</div>
-                            <div style="font-size: 8pt;">Методология адаптации VR/AR-обучения под различные отрасли</div>
+                        <div class="color-box" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                            <div class="box-title">Адаптация под отрасли</div>
+                            <div class="box-text">Методология адаптации VR/AR-обучения под специфику различных отраслей с высоким риском</div>
                         </div>
                     </div>
                 </div>
