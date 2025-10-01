@@ -27,7 +27,7 @@
             height: 297mm;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             margin: 0 auto;
-            padding: 15mm;
+            padding: 12mm;
             box-shadow: 0 10px 40px rgba(0,0,0,0.2);
             position: relative;
             overflow: hidden;
@@ -43,37 +43,37 @@
 
         .header {
             text-align: center;
-            margin-bottom: 6mm;
+            margin-bottom: 5mm;
             background: rgba(255,255,255,0.98);
-            padding: 8mm;
+            padding: 6mm;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         h1 {
             color: #2d3748;
-            font-size: 16pt;
+            font-size: 15pt;
             font-weight: 700;
             line-height: 1.2;
-            margin-bottom: 3mm;
+            margin-bottom: 2mm;
         }
 
         .author {
             color: #4a5568;
-            font-size: 11pt;
+            font-size: 10pt;
             font-weight: 600;
         }
 
         .main-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 4mm;
+            gap: 3.5mm;
             flex: 1;
         }
 
         .section {
             background: rgba(255,255,255,0.98);
-            padding: 4mm;
+            padding: 3.5mm;
             border-radius: 8px;
             box-shadow: 0 3px 10px rgba(0,0,0,0.1);
             display: flex;
@@ -90,11 +90,11 @@
 
         h2 {
             color: #667eea;
-            font-size: 11pt;
+            font-size: 10.5pt;
             font-weight: 700;
-            margin-bottom: 3.5mm;
+            margin-bottom: 2.5mm;
             border-bottom: 2px solid #667eea;
-            padding-bottom: 1.5mm;
+            padding-bottom: 1mm;
         }
 
         p, li {
@@ -238,6 +238,24 @@
 
             .slide {
                 box-shadow: none;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+
+            .stat-box,
+            .big-stat,
+            .color-box,
+            .section,
+            .header {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
             }
         }
     </style>
@@ -343,14 +361,14 @@
                 </div>
 
                 <!-- Источники -->
-                <div class="section span-3" style="margin-top: -2mm;">
-                    <h2>📚 Источники</h2>
-                    <div style="font-size: 5.5pt; line-height: 1.35; color: #2d3748; column-count: 2; column-gap: 4mm;">
-                        <p style="margin-bottom: 1mm;">1. 25+ Amazing Virtual Reality Statistics [2023]: The Future of VR + AR - [Электронный ресурс] – Режим доступа: https://www.zippia.com/advice/virtual-reality-statistics/ ; посещено 27.09.2025</p>
-                        <p style="margin-bottom: 1mm;">2. Augmented Reality Trends of 2024: New Milestones in Immersive Technology - [Электронный ресурс] – Режим доступа: https://mobidev.biz/blog/augmented-reality-trends-future-ar-technologies ; посещено 25.09.2025</p>
-                        <p style="margin-bottom: 1mm;">3. Develop Virtual Reality (VR) Experiences in Unity - [Электронный ресурс] – Режим доступа: https://www.queppelin.com/virtual-reality-in-unity/ ; посещено 29.09.2025</p>
-                        <p style="margin-bottom: 1mm;">4. Jaron Lanier's Eye Phone: Head And Glove Virtual Reality In The 1980s - [Электронный ресурс] – Режим доступа: https://flashbak.com/jaron-laniers-eyephone-head-and-glove-virtual-reality-in-the-1980s-26180/ ; посещено 26.09.2025</p>
-                        <p style="margin-bottom: 1mm;">5. Unreal Engine AR Development: A Deeper Dive - [Электронный ресурс] – Режим доступа: https://program-ace.com/blog/unreal-engine-ar-development/ ; посещено 29.09.2025</p>
+                <div class="section span-3" style="padding: 2.5mm;">
+                    <h2 style="font-size: 9pt; margin-bottom: 1.5mm;">📚 Источники</h2>
+                    <div style="font-size: 5pt; line-height: 1.25; color: #2d3748; column-count: 2; column-gap: 3mm;">
+                        <p style="margin-bottom: 0.8mm;">1. 25+ Amazing Virtual Reality Statistics [2023]: The Future of VR + AR - [Электронный ресурс] – Режим доступа: https://www.zippia.com/advice/virtual-reality-statistics/ ; посещено 27.09.2025</p>
+                        <p style="margin-bottom: 0.8mm;">2. Augmented Reality Trends of 2024: New Milestones in Immersive Technology - [Электронный ресурс] – Режим доступа: https://mobidev.biz/blog/augmented-reality-trends-future-ar-technologies ; посещено 25.09.2025</p>
+                        <p style="margin-bottom: 0.8mm;">3. Develop Virtual Reality (VR) Experiences in Unity - [Электронный ресурс] – Режим доступа: https://www.queppelin.com/virtual-reality-in-unity/ ; посещено 29.09.2025</p>
+                        <p style="margin-bottom: 0.8mm;">4. Jaron Lanier's Eye Phone: Head And Glove Virtual Reality In The 1980s - [Электронный ресурс] – Режим доступа: https://flashbak.com/jaron-laniers-eyephone-head-and-glove-virtual-reality-in-the-1980s-26180/ ; посещено 26.09.2025</p>
+                        <p style="margin-bottom: 0.8mm;">5. Unreal Engine AR Development: A Deeper Dive - [Электронный ресурс] – Режим доступа: https://program-ace.com/blog/unreal-engine-ar-development/ ; посещено 29.09.2025</p>
                     </div>
                 </div>
             </div>
