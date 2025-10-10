@@ -28,7 +28,7 @@
             max-width: 210mm;
             margin: 0 auto;
             padding: 0;
-            height: 297mm;
+            min-height: 297mm;
             display: flex;
             flex-direction: column;
         }
@@ -91,6 +91,11 @@
             background: #28a745;
         }
         
+        .research-question p {
+            font-size: 13px;
+            line-height: 1.3;
+        }
+        
         .practical-significance {
             background: #fff3cd;
             border-color: #ffc107;
@@ -120,6 +125,33 @@
         .key-results .section-title {
             background: rgba(255, 255, 255, 0.2);
             color: white;
+        }
+        
+        .literature {
+            grid-column: 1 / -1;
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            margin-top: 10px;
+        }
+        
+        .literature .section-title {
+            background: #6c757d;
+            font-size: 10px;
+            padding: 6px 10px;
+        }
+        
+        .literature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .literature-item {
+            font-size: 8px;
+            line-height: 1.2;
+            margin-bottom: 6px;
+            text-align: justify;
+            padding: 0;
         }
         
         .stats-grid {
@@ -233,13 +265,16 @@
                 <ul>
                     <li><span class="highlight">Снижение нагрузки на операторов до 50%</span> при внедрении ИИ</li>
                     <li>Сокращение времени реакции <strong>с 20 минут до 2-3 минут</strong> (IBM Global AI Index, 2024)</li>
-                    <li><strong>Проблема:</strong> корпорации инвестируют в ИИ, но не достигают ожидаемой эффективности из-за низкой цифровой зрелости</li>
                 </ul>
+                
+                <div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 8px; margin: 8px 0; border-radius: 4px;">
+                    <strong style="color: #856404;">🔥 Проблема исследования:</strong> корпорации инвестируют в ИИ, но не достигают ожидаемой эффективности из-за низкой цифровой зрелости внутренних процессов
+                </div>
             </section>
 
             <section class="section research-question">
                 <div class="section-title">🔬 Исследовательский вопрос</div>
-                <p style="font-weight: bold; font-size: 12px; margin-bottom: 8px;">
+                <p style="font-weight: bold; font-size: 13px; margin-bottom: 8px; line-height: 1.3;">
                     Как уровень цифровой зрелости корпорации влияет на успешность внедрения искусственного интеллекта в системе внутреннего Service Desk?
                 </p>
             </section>
@@ -291,6 +326,19 @@
                 <div style="margin-top: 12px; text-align: center; font-size: 11px;">
                     <strong>Итоговый эффект:</strong> Компании с высоким уровнем цифровой зрелости демонстрируют значительно более успешное внедрение AI-технологий в Service Desk
                 </div>
+            </section>
+
+            <section class="section literature">
+                <div class="section-title">📚 Список литературы</div>
+                <ol class="literature-list">
+                    <li class="literature-item">Валиева Э. М. ВНЕДРЕНИЕ SERVICE DESK И ОРГАНИЗАЦИИ СЛУЖБЫ ПОДДЕРЖКИ НА ПРЕДПРИЯТИИ // Современные научные исследования и инновации. – 2023. – № 12 (152). – [Электронный ресурс]. – Режим доступа: https://www.elibrary.ru/item.asp?id=57936718 ; посещено 01.10.2025.</li>
+                    <li class="literature-item">Зинченко В. В. СРАВНЕНИЕ ЛУЧШИХ РОССИЙСКИХ SERVICE DESK СИСТЕМ // Вестник науки. – 2025. – Т. 4, № 6(87). – С. 1155-1159. – [Электронный ресурс]. – Режим доступа: https://elibrary.ru/item.asp?id=82489543 ; посещено 27.09.2025.</li>
+                    <li class="literature-item">Козятинский С. А. СРАВНЕНИЕ РАБОТЫ РЕКУРРЕНТНЫХ НЕЙРОННЫХ СЕТЕЙ LTSM И GRU ДЛЯ КЛАССИФИКАЦИИ ПОСТУПАЮЩИХ ЗАЯВОК В СИСТЕМЕ SERVICE DESK // Наукосопра. – 2024. – № 1-1. – С. 165-173. – [Электронный ресурс]. – Режим доступа: https://www.elibrary.ru/item.asp?id=60774584 ; посещено 03.10.2025.</li>
+                    <li class="literature-item">Померанцев А. HelpDesk и ServiceDesk. Что это и зачем это нужно вашей компании / Хабр – [Электронный ресурс]. – Режим доступа: https://habr.com/ru/companies/deskun/articles/331354/ ; посещено 08.10.2025.</li>
+                    <li class="literature-item">Токтаров Т. М., Белаш В. Ю. К ВОПРОСУ О РЕАЛИЗАЦИИ ВЕБ-ПРИЛОЖЕНИЯ (НА ПРИМЕРЕ ПРИЛОЖЕНИЯ SERVICE DESK) // Тенденции развития науки и образования. – 2024. – № 106-11. – С. 117-119. – [Электронный ресурс]. – Режим доступа: https://www.elibrary.ru/item.asp?id=65662364 ; посещено 05.10.2025.</li>
+                    <li class="literature-item">Чаричанский А. В., Янаева М. В. ВЕБ-СИСТЕМА SERVICE DESK С ПРИМЕНЕНИЕМ НЕЙРОННЫХ СЕТЕЙ // Молодой исследователь Дона. – 2022. – № 5 (38). – С. 35-38. – [Электронный ресурс]. – Режим доступа: https://www.elibrary.ru/item.asp?id=49545195 ; посещено 02.10.2025.</li>
+                    <li class="literature-item">Юриков Е. С., Романов А. А. ПОПУЛЯРНЫЕ SERVICE DESK РЕШЕНИЯ В РОССИЙСКОЙ ФЕДЕРАЦИИ // Вестник Ульяновского государственного технического университета. – 2025. – № 1 (109). – С. 30-34. – [Электронный ресурс]. – Режим доступа: https://elibrary.ru/item.asp?id=82428080 ; посещено 04.10.2025.</li>
+                </ol>
             </section>
         </main>
     </div>
