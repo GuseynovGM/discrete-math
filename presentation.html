@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ВКР: Влияние внедрения ИИ в Service Desk</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 210mm;
+            height: 297mm;
+            padding: 15mm;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+        
+        .container {
+            background: white;
+            height: 100%;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        header {
+            text-align: center;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        
+        h1 {
+            font-size: 18px;
+            color: #667eea;
+            margin-bottom: 6px;
+            line-height: 1.3;
+        }
+        
+        .author {
+            font-size: 11px;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 4px;
+        }
+        
+        section {
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            font-size: 13px;
+            color: #764ba2;
+            margin-bottom: 6px;
+            border-left: 4px solid #667eea;
+            padding-left: 8px;
+        }
+        
+        p, li {
+            font-size: 9px;
+            line-height: 1.4;
+            margin-bottom: 4px;
+        }
+        
+        ul {
+            padding-left: 18px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-top: 8px;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        
+        .stat-number {
+            font-size: 22px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        .stat-label {
+            font-size: 8px;
+            opacity: 0.95;
+        }
+        
+        .highlight-box {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 4px;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        
+        .key-results {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 8px;
+        }
+        
+        .key-results h2 {
+            color: white;
+            border-left: 4px solid white;
+            margin-bottom: 8px;
+        }
+        
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-top: 8px;
+        }
+        
+        .result-item {
+            background: rgba(255,255,255,0.2);
+            padding: 8px;
+            border-radius: 6px;
+            text-align: center;
+        }
+        
+        .result-value {
+            font-size: 20px;
+            font-weight: bold;
+            display: block;
+        }
+        
+        .result-desc {
+            font-size: 8px;
+            margin-top: 3px;
+        }
+        
+        strong {
+            color: #667eea;
+        }
+        
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Влияние внедрения искусственного интеллекта в Service Desk на цифровую зрелость корпорации</h1>
+            <p class="author">Автор: Исираев Абдусамад Абдиахадович</p>
+        </header>
+        
+        <section>
+            <h2>🎯 Исследовательский вопрос</h2>
+            <div class="highlight-box">
+                <p><strong>Как уровень цифровой зрелости корпорации влияет на успешность внедрения искусственного интеллекта в системе внутреннего Service Desk?</strong></p>
+            </div>
+        </section>
+        
+        <section>
+            <h2>📊 Мотивация и контекст исследования</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">70%</span>
+                    <span class="stat-label">корпораций внедряют AI-инструменты (Gartner, 2024)</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">45 000</span>
+                    <span class="stat-label">обращений в год обрабатывает Service Desk</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">60-65%</span>
+                    <span class="stat-label">запросов являются повторяющимися (HDI, 2023)</span>
+                </div>
+            </div>
+            <div class="stats-grid" style="margin-top: 8px;">
+                <div class="stat-card">
+                    <span class="stat-number">50%</span>
+                    <span class="stat-label">снижение нагрузки на операторов</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">20→2-3 мин</span>
+                    <span class="stat-label">сокращение времени реакции (IBM, 2024)</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">3.4×</span>
+                    <span class="stat-label">ROI при высокой цифровой зрелости (McKinsey, 2024)</span>
+                </div>
+            </div>
+        </section>
+        
+        <div class="two-column">
+            <section>
+                <h2>💼 Практическая значимость</h2>
+                <ul>
+                    <li>Формирование модели оценки готовности корпорации к внедрению AI-SD (<strong>Digital Readiness Index</strong>)</li>
+                    <li>Оптимизация затрат и рост производительности внутренней поддержки</li>
+                    <li>Повышение удовлетворённости сотрудников за счёт быстрого и персонализированного решения запросов</li>
+                    <li>Компании с высокой цифровой зрелостью достигают <strong>до 3,4 раза большей окупаемости</strong> инвестиций в ИИ</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2>🔬 Научный вклад</h2>
+                <ul>
+                    <li>Разработка <strong>концептуальной модели</strong> связи между уровнем цифровой зрелости и эффективностью AI-SD</li>
+                    <li>Расширение теории цифровой трансформации внутренних сервисов</li>
+                    <li>Вклад в развитие направлений управления изменениями и <strong>AI governance</strong> в корпоративной среде</li>
+                    <li>Исследование зависимости успешности внедрения AI-Service Desk от уровня цифровой зрелости</li>
+                </ul>
+            </section>
+        </div>
+        
+        <div class="key-results">
+            <h2>🎉 Ключевые результаты исследования</h2>
+            <div class="results-grid">
+                <div class="result-item">
+                    <span class="result-value">+50%</span>
+                    <span class="result-desc">Скорость обработки обращений</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-value">+3.4×</span>
+                    <span class="result-desc">ROI внедрения AI-SD</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-value">–40%</span>
+                    <span class="result-desc">Трудозатрат первой линии поддержки</span>
+                </div>
+            </div>
+        </div>
+        
+        <section style="margin-top: auto; padding-top: 8px; border-top: 2px solid #eee;">
+            <p style="text-align: center; font-size: 8px; color: #999;">
+                <strong>Проблема:</strong> Корпорации инвестируют в ИИ, но не достигают ожидаемой эффективности из-за низкой цифровой зрелости внутренних процессов
+            </p>
+        </section>
+    </div>
+</body>
+</html>
