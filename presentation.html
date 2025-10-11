@@ -3,344 +3,337 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Влияние внедрения ИИ в Service Desk на цифровую зрелость корпорации</title>
+    <title>Влияние внедрения AI в Service Desk на цифровую зрелость корпорации</title>
     <style>
-        @page {
-            size: A4;
-            margin: 15mm;
-        }
-        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.4;
-            color: #333;
-            background: #fff;
-            font-size: 11px;
+
+        @page {
+            size: A4 landscape;
+            margin: 0;
         }
-        
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.4;
+        }
+
         .container {
-            max-width: 210mm;
-            margin: 0 auto;
-            padding: 0;
-            min-height: 297mm;
+            width: 297mm;
+            height: 210mm;
+            padding: 15mm;
+            background: white;
             display: flex;
             flex-direction: column;
+            page-break-after: always;
         }
-        
+
         .header {
-            background: linear-gradient(135deg, #2c3e50, #34495e);
-            color: white;
-            padding: 15px 20px;
             text-align: center;
-            border-radius: 8px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
         }
-        
+
         .header h1 {
-            font-size: 16px;
-            font-weight: bold;
-            margin-bottom: 8px;
+            font-size: 24px;
+            color: #667eea;
+            margin-bottom: 6px;
+            font-weight: 700;
             line-height: 1.2;
         }
-        
-        .author-info {
-            font-size: 12px;
-            opacity: 0.9;
+
+        .author {
+            font-size: 13px;
+            color: #555;
+            font-style: italic;
+            margin-top: 4px;
         }
-        
+
         .content {
             flex: 1;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 15px;
+            gap: 12px;
+            margin-bottom: 10px;
         }
-        
+
+        .left-column, .right-column {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
         .section {
             background: #f8f9fa;
-            border: 1px solid #e9ecef;
-            border-radius: 6px;
-            padding: 12px;
+            padding: 10px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
         }
-        
-        .section-title {
-            background: #3498db;
-            color: white;
-            font-size: 12px;
-            font-weight: bold;
-            padding: 8px 10px;
-            margin: -12px -12px 10px -12px;
-            border-radius: 6px 6px 0 0;
-        }
-        
-        .motivation {
-            grid-column: 1 / -1;
-        }
-        
-        .research-question {
-            background: #e8f5e8;
-            border-color: #28a745;
-        }
-        
-        .research-question .section-title {
-            background: #28a745;
-        }
-        
-        .research-question p {
-            font-size: 13px;
-            line-height: 1.3;
-        }
-        
-        .practical-significance {
-            background: #fff3cd;
-            border-color: #ffc107;
-        }
-        
-        .practical-significance .section-title {
-            background: #ffc107;
-            color: #212529;
-        }
-        
-        .scientific-contribution {
-            background: #f8d7da;
-            border-color: #dc3545;
-        }
-        
-        .scientific-contribution .section-title {
-            background: #dc3545;
-        }
-        
-        .key-results {
-            grid-column: 1 / -1;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-        }
-        
-        .key-results .section-title {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-        }
-        
-        .literature {
-            grid-column: 1 / -1;
-            background: #f8f9fa;
-            border: 1px solid #e9ecef;
-            margin-top: 10px;
-        }
-        
-        .literature .section-title {
-            background: #6c757d;
-            font-size: 10px;
-            padding: 6px 10px;
-        }
-        
-        .literature-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .literature-item {
-            font-size: 8px;
-            line-height: 1.2;
+
+        .section h2 {
+            font-size: 14px;
+            color: #667eea;
             margin-bottom: 6px;
-            text-align: justify;
-            padding: 0;
+            font-weight: 600;
         }
-        
+
+        .section p, .section ul {
+            font-size: 10px;
+            line-height: 1.5;
+            color: #444;
+        }
+
+        .section ul {
+            padding-left: 16px;
+            margin-top: 4px;
+        }
+
+        .section li {
+            margin-bottom: 3px;
+        }
+
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin: 10px 0;
+            gap: 8px;
+            margin-top: 8px;
         }
-        
-        .stat-item {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 8px;
-            border-radius: 4px;
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
             text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        
-        .stat-number {
-            font-size: 18px;
-            font-weight: bold;
-            color: #3498db;
+
+        .stat-value {
+            font-size: 28px;
+            font-weight: 700;
             display: block;
             margin-bottom: 4px;
         }
-        
-        .key-results .stat-number {
-            color: #fff;
-            font-size: 20px;
-        }
-        
-        .stat-description {
+
+        .stat-label {
             font-size: 9px;
-            line-height: 1.2;
-        }
-        
-        .key-results .stat-description {
-            color: rgba(255, 255, 255, 0.9);
-        }
-        
-        ul {
-            padding-left: 15px;
-        }
-        
-        li {
-            margin-bottom: 4px;
-            font-size: 10px;
+            font-weight: 500;
+            opacity: 0.95;
             line-height: 1.3;
         }
-        
+
+        .context-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 6px;
+            margin-top: 6px;
+        }
+
+        .mini-stat {
+            background: white;
+            border: 2px solid #667eea;
+            padding: 6px;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .mini-stat-value {
+            font-size: 18px;
+            font-weight: 700;
+            color: #667eea;
+            display: block;
+        }
+
+        .mini-stat-label {
+            font-size: 8px;
+            color: #555;
+            margin-top: 2px;
+            line-height: 1.2;
+        }
+
         .highlight {
             background: #fff3cd;
-            padding: 2px 4px;
-            border-radius: 3px;
-            font-weight: bold;
+            padding: 8px;
+            border-radius: 6px;
+            border-left: 3px solid #ffc107;
+            margin-top: 6px;
         }
-        
-        .source {
-            font-style: italic;
-            color: #6c757d;
-            font-size: 9px;
-            margin-top: 4px;
+
+        .highlight p {
+            font-size: 10px;
+            font-weight: 600;
+            color: #856404;
         }
-        
+
+        .references {
+            background: #e9ecef;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin-top: 8px;
+        }
+
+        .references h3 {
+            font-size: 10px;
+            color: #667eea;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+
+        .references ol {
+            padding-left: 16px;
+            columns: 2;
+            column-gap: 12px;
+        }
+
+        .references li {
+            font-size: 7px;
+            line-height: 1.4;
+            color: #555;
+            margin-bottom: 3px;
+            break-inside: avoid;
+        }
+
+        .research-question {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            border: 2px solid #667eea;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .research-question h2 {
+            color: #764ba2;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 8px;
+            font-weight: 600;
+            margin-right: 4px;
+            margin-bottom: 4px;
+        }
+
         @media print {
             body {
-                font-size: 10px;
+                background: white;
             }
             
             .container {
-                height: auto;
-            }
-            
-            .section {
-                break-inside: avoid;
-                page-break-inside: avoid;
+                margin: 0;
+                padding: 15mm;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header class="header">
+        <div class="header">
             <h1>Влияние внедрения искусственного интеллекта в Service Desk на цифровую зрелость корпорации</h1>
-            <div class="author-info">
-                <strong>Автор:</strong> Исираев Абдусамад Абдиахадович | 
-                <strong>ВКР</strong> по специальности «Цифровая трансформация»
+            <div class="author">Автор: Исираев Абдусамад Абдиахадович</div>
+        </div>
+
+        <div class="content">
+            <div class="left-column">
+                <div class="section">
+                    <h2>📊 Мотивация и контекст исследования</h2>
+                    <div class="context-stats">
+                        <div class="mini-stat">
+                            <span class="mini-stat-value">70%</span>
+                            <div class="mini-stat-label">корпораций внедряют AI-инструменты (Gartner, 2024)</div>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-stat-value">45 000</span>
+                            <div class="mini-stat-label">обращений/год обрабатывает Service Desk</div>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-stat-value">60–65%</span>
+                            <div class="mini-stat-label">запросов являются повторяющимися (HDI, 2023)</div>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-stat-value">50%</span>
+                            <div class="mini-stat-label">снижение нагрузки на операторов</div>
+                        </div>
+                    </div>
+                    <p style="margin-top: 8px;"><strong>Проблема:</strong> Корпорации инвестируют в ИИ, но не достигают ожидаемой эффективности из-за низкой цифровой зрелости внутренних процессов. Время реакции сокращается с 20 минут до 2–3 минут (IBM Global AI Index, 2024).</p>
+                </div>
+
+                <div class="section research-question">
+                    <h2>❓ Исследовательский вопрос</h2>
+                    <p style="font-weight: 600; font-size: 11px; color: #764ba2; margin-top: 4px;">Как уровень цифровой зрелости корпорации влияет на успешность внедрения искусственного интеллекта в системе внутреннего Service Desk?</p>
+                </div>
+
+                <div class="section">
+                    <h2>💼 Практическая значимость</h2>
+                    <ul>
+                        <li><strong>Digital Readiness Index:</strong> Формирование модели оценки готовности корпорации к внедрению AI-SD</li>
+                        <li><strong>Оптимизация затрат:</strong> Помощь крупным организациям в росте производительности внутренней поддержки</li>
+                        <li><strong>Удовлетворённость:</strong> Быстрое и персонализированное решение запросов сотрудников</li>
+                    </ul>
+                    <div class="highlight">
+                        <p>🎯 Корпорации с высоким уровнем цифровой зрелости добиваются до 3,4 раза большей окупаемости инвестиций в ИИ (McKinsey, 2024)</p>
+                    </div>
+                </div>
             </div>
-        </header>
 
-        <main class="content">
-            <section class="section motivation">
-                <div class="section-title">🎯 Мотивация и контекст исследования</div>
-                
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <span class="stat-number">70%</span>
-                        <div class="stat-description">корпораций внедряют AI-инструменты в 2024 году</div>
-                        <div class="source">Gartner, 2024</div>
+            <div class="right-column">
+                <div class="section">
+                    <h2>🔬 Научный вклад</h2>
+                    <div style="margin-top: 6px;">
+                        <span class="badge">Концептуальная модель</span>
+                        <span class="badge">Цифровая трансформация</span>
+                        <span class="badge">AI Governance</span>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">45,000</span>
-                        <div class="stat-description">обращений в год обрабатывает средний Service Desk</div>
-                        <div class="source">HDI Benchmark, 2023</div>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">60-65%</span>
-                        <div class="stat-description">запросов являются повторяющимися</div>
-                        <div class="source">HDI Benchmark, 2023</div>
+                    <ul style="margin-top: 6px;">
+                        <li>Разработка концептуальной модели связи между уровнем цифровой зрелости и эффективностью AI-SD</li>
+                        <li>Расширение теории цифровой трансформации внутренних сервисов</li>
+                        <li>Вклад в развитие управления изменениями и AI governance в корпоративной среде</li>
+                    </ul>
+                    <div class="highlight">
+                        <p>✨ Научная новизна: исследование зависимости успешности внедрения AI-Service Desk от уровня цифровой зрелости, а не только от технологических факторов</p>
                     </div>
                 </div>
 
-                <ul>
-                    <li><span class="highlight">Снижение нагрузки на операторов до 50%</span> при внедрении ИИ</li>
-                    <li>Сокращение времени реакции <strong>с 20 минут до 2-3 минут</strong> (IBM Global AI Index, 2024)</li>
-                </ul>
-                
-                <div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 8px; margin: 8px 0; border-radius: 4px;">
-                    <strong style="color: #856404;">🔥 Проблема исследования:</strong> корпорации инвестируют в ИИ, но не достигают ожидаемой эффективности из-за низкой цифровой зрелости внутренних процессов
-                </div>
-            </section>
-
-            <section class="section research-question">
-                <div class="section-title">🔬 Исследовательский вопрос</div>
-                <p style="font-weight: bold; font-size: 13px; margin-bottom: 8px; line-height: 1.3;">
-                    Как уровень цифровой зрелости корпорации влияет на успешность внедрения искусственного интеллекта в системе внутреннего Service Desk?
-                </p>
-            </section>
-
-            <section class="section practical-significance">
-                <div class="section-title">💼 Практическая значимость</div>
-                
-                <div class="stat-item" style="margin-bottom: 10px;">
-                    <span class="stat-number" style="color: #ffc107;">3,4×</span>
-                    <div class="stat-description" style="color: #333;">большая окупаемость инвестиций в ИИ у компаний с высокой цифровой зрелостью</div>
-                    <div class="source">McKinsey, 2024</div>
-                </div>
-
-                <ul>
-                    <li>Формирование модели оценки готовности корпорации к внедрению AI-SD (Digital Readiness Index)</li>
-                    <li>Помощь организациям в оптимизации затрат и росте производительности</li>
-                    <li>Повышение удовлетворенности сотрудников за счет быстрого решения запросов</li>
-                </ul>
-            </section>
-
-            <section class="section scientific-contribution">
-                <div class="section-title">🎓 Научный вклад</div>
-                <ul>
-                    <li>Разработка концептуальной модели связи между уровнем цифровой зрелости и эффективностью AI-SD</li>
-                    <li>Расширение теории цифровой трансформации внутренних сервисов</li>
-                    <li>Развитие направлений управления изменениями и AI governance</li>
-                    <li><strong>Научная новизна:</strong> исследование зависимости успешности внедрения AI-Service Desk от цифровой зрелости, а не только от технологических факторов</li>
-                </ul>
-            </section>
-
-            <section class="section key-results">
-                <div class="section-title">🚀 Ключевые результаты исследования</div>
-                
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <span class="stat-number">+50%</span>
-                        <div class="stat-description">увеличение скорости обработки обращений</div>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">+3,4×</span>
-                        <div class="stat-description">рост ROI внедрения AI-Service Desk</div>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">–40%</span>
-                        <div class="stat-description">сокращение трудозатрат первой линии поддержки</div>
+                <div class="section">
+                    <h2>🎯 Ключевые результаты исследования</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-value">+50%</span>
+                            <div class="stat-label">Скорость обработки обращений</div>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-value">×3.4</span>
+                            <div class="stat-label">ROI внедрения AI-Service Desk</div>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-value">−40%</span>
+                            <div class="stat-label">Трудозатрат первой линии поддержки</div>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </div>
 
-                <div style="margin-top: 12px; text-align: center; font-size: 11px;">
-                    <strong>Итоговый эффект:</strong> Компании с высоким уровнем цифровой зрелости демонстрируют значительно более успешное внедрение AI-технологий в Service Desk
-                </div>
-            </section>
-
-            <section class="section literature">
-                <div class="section-title">📚 Список литературы</div>
-                <ol class="literature-list">
-                    <li class="literature-item">Валиева Э. М. ВНЕДРЕНИЕ SERVICE DESK И ОРГАНИЗАЦИИ СЛУЖБЫ ПОДДЕРЖКИ НА ПРЕДПРИЯТИИ // Современные научные исследования и инновации. – 2023. – № 12 (152). – [Электронный ресурс]. – Режим доступа: https://www.elibrary.ru/item.asp?id=57936718 ; посещено 01.10.2025.</li>
-                    <li class="literature-item">Зинченко В. В. СРАВНЕНИЕ ЛУЧШИХ РОССИЙСКИХ SERVICE DESK СИСТЕМ // Вестник науки. – 2025. – Т. 4, № 6(87). – С. 1155-1159. – [Электронный ресурс]. – Режим доступа: https://elibrary.ru/item.asp?id=82489543 ; посещено 27.09.2025.</li>
-                    <li class="literature-item">Козятинский С. А. СРАВНЕНИЕ РАБОТЫ РЕКУРРЕНТНЫХ НЕЙРОННЫХ СЕТЕЙ LTSM И GRU ДЛЯ КЛАССИФИКАЦИИ ПОСТУПАЮЩИХ ЗАЯВОК В СИСТЕМЕ SERVICE DESK // Наукосопра. – 2024. – № 1-1. – С. 165-173. – [Электронный ресурс]. – Режим доступа: https://www.elibrary.ru/item.asp?id=60774584 ; посещено 03.10.2025.</li>
-                    <li class="literature-item">Померанцев А. HelpDesk и ServiceDesk. Что это и зачем это нужно вашей компании / Хабр – [Электронный ресурс]. – Режим доступа: https://habr.com/ru/companies/deskun/articles/331354/ ; посещено 08.10.2025.</li>
-                    <li class="literature-item">Токтаров Т. М., Белаш В. Ю. К ВОПРОСУ О РЕАЛИЗАЦИИ ВЕБ-ПРИЛОЖЕНИЯ (НА ПРИМЕРЕ ПРИЛОЖЕНИЯ SERVICE DESK) // Тенденции развития науки и образования. – 2024. – № 106-11. – С. 117-119. – [Электронный ресурс]. – Режим доступа: https://www.elibrary.ru/item.asp?id=65662364 ; посещено 05.10.2025.</li>
-                    <li class="literature-item">Чаричанский А. В., Янаева М. В. ВЕБ-СИСТЕМА SERVICE DESK С ПРИМЕНЕНИЕМ НЕЙРОННЫХ СЕТЕЙ // Молодой исследователь Дона. – 2022. – № 5 (38). – С. 35-38. – [Электронный ресурс]. – Режим доступа: https://www.elibrary.ru/item.asp?id=49545195 ; посещено 02.10.2025.</li>
-                    <li class="literature-item">Юриков Е. С., Романов А. А. ПОПУЛЯРНЫЕ SERVICE DESK РЕШЕНИЯ В РОССИЙСКОЙ ФЕДЕРАЦИИ // Вестник Ульяновского государственного технического университета. – 2025. – № 1 (109). – С. 30-34. – [Электронный ресурс]. – Режим доступа: https://elibrary.ru/item.asp?id=82428080 ; посещено 04.10.2025.</li>
-                </ol>
-            </section>
-        </main>
+        <div class="references">
+            <h3>📚 Список литературы</h3>
+            <ol>
+                <li>Валиева Э. М. ВНЕДРЕНИЕ SERVICE DESK И ОРГАНИЗАЦИИ СЛУЖБЫ ПОДДЕРЖКИ НА ПРЕДПРИЯТИИ // Современные научные исследования и инновации. – 2023. – № 12 (152). – [Электронный ресурс]. – Режим доступа: https://www.elibrary.ru/item.asp?id=57936718 ; посещено 01.10.2025.</li>
+                <li>Зинченко В. В. СРАВНЕНИЕ ЛУЧШИХ РОССИЙСКИХ SERVICE DESK СИСТЕМ // Вестник науки. – 2025. – Т. 4, № 6(87). – С. 1155-1159. – [Электронный ресурс]. – Режим доступа: https://elibrary.ru/item.asp?id=82489543 ; посещено 27.09.2025.</li>
+                <li>Козятинский С. А. СРАВНЕНИЕ РАБОТЫ РЕКУРРЕНТНЫХ НЕЙРОННЫХ СЕТЕЙ LTSM И GRU ДЛЯ КЛАССИФИКАЦИИ ПОСТУПАЮЩИХ ЗАЯВОК В СИСТЕМЕ SERVICE DESK // Наукосопра. – 2024. – № 1-1. – С. 165-173. – [Электронный ресурс]. – Режим доступа: https://www.elibrary.ru/item.asp?id=60774584 ; посещено 03.10.2025.</li>
+                <li>Померанцев А. HelpDesk и ServiceDesk. Что это и зачем это нужно вашей компании / Хабр – [Электронный ресурс]. – Режим доступа: https://habr.com/ru/companies/deskun/articles/331354/ ; посещено 08.10.2025.</li>
+                <li>Токтаров Т. М., Белаш В. Ю. К ВОПРОСУ О РЕАЛИЗАЦИИ ВЕБ-ПРИЛОЖЕНИЯ (НА ПРИМЕРЕ ПРИЛОЖЕНИЯ SERVICE DESK) // Тенденции развития науки и образования. – 2024. – № 106-11. – С. 117-119. – [Электронный ресурс]. – Режим доступа: https://www.elibrary.ru/item.asp?id=65662364 ; посещено 05.10.2025.</li>
+                <li>Чаричанский А. В., Янаева М. В. ВЕБ-СИСТЕМА SERVICE DESK С ПРИМЕНЕНИЕМ НЕЙРОННЫХ СЕТЕЙ // Молодой исследователь Дона. – 2022. – № 5 (38). – С. 35-38. – [Электронный ресурс]. – Режим доступа: https://www.elibrary.ru/item.asp?id=49545195 ; посещено 02.10.2025.</li>
+                <li>Юриков Е. С., Романов А. А. ПОПУЛЯРНЫЕ SERVICE DESK РЕШЕНИЯ В РОССИЙСКОЙ ФЕДЕРАЦИИ // Вестник Ульяновского государственного технического университета. – 2025. – № 1 (109). – С. 30-34. – [Электронный ресурс]. – Режим доступа: https://elibrary.ru/item.asp?id=82428080 ; посещено 04.10.2025.</li>
+            </ol>
+        </div>
     </div>
 </body>
 </html>
